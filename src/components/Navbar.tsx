@@ -79,6 +79,14 @@ const Navbar = () => {
               Career Assessment
             </Link>
             <Link
+              to="/learning-roadmap"
+              className={`text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 transition-colors font-medium ${
+                location.pathname === '/learning-roadmap' ? 'text-grubble-500 dark:text-grubble-400' : ''
+              }`}
+            >
+              Roadmap
+            </Link>
+            <Link
               to="/course-comparison"
               className={`text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 transition-colors font-medium ${
                 location.pathname === '/course-comparison' ? 'text-grubble-500 dark:text-grubble-400' : ''
@@ -86,96 +94,32 @@ const Navbar = () => {
             >
               Course Comparison
             </Link>
-            <Link
-              to="/gamification"
-              className={`text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 transition-colors font-medium ${
-                location.pathname === '/gamification' ? 'text-grubble-500 dark:text-grubble-400' : ''
-              }`}
-            >
-              Leaderboard
-            </Link>
-            <Link
-              to="/skill-wallet"
-              className={`text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 transition-colors font-medium ${
-                location.pathname === '/skill-wallet' ? 'text-grubble-500 dark:text-grubble-400' : ''
-              }`}
-            >
-              Skill Wallet
-            </Link>
-            
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 font-medium">
-                  More <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg">
-                <DropdownMenuItem asChild>
-                  <Link to="/profile/resume" className="flex items-center gap-2 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-grubble-50 dark:hover:bg-grubble-900/30">
-                    <FileText className="h-4 w-4" />
-                    Resume Builder
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/community" className="flex items-center gap-2 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-grubble-50 dark:hover:bg-grubble-900/30">
-                    <Users className="h-4 w-4" />
-                    Community
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/paths" className="flex items-center gap-2 px-2 py-2 text-gray-700 dark:text-gray-300 hover:bg-grubble-50 dark:hover:bg-grubble-900/30">
-                    <Lightbulb className="h-4 w-4" />
-                    Project Hub
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
             <SearchBar />
             <DarkModeToggle />
-            {isLoggedIn ? (
-              <ProfileDropdown />
-            ) : (
-              <>
-                <Link to="/login">
-                  <Button variant="outline" className="border-grubble-500 text-grubble-500 dark:border-grubble-400 dark:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30">
-                    Log in
-                  </Button>
-                </Link>
-                <Link to="/signup">
-                  <Button className="bg-grubble-500 hover:bg-grubble-600 text-white dark:bg-grubble-600 dark:hover:bg-grubble-700">
-                    Sign up
-                  </Button>
-                </Link>
-              </>
-            )}
           </div>
 
           <div className="md:hidden flex items-center space-x-4">
             <SearchBar />
             <DarkModeToggle />
-            {isLoggedIn ? (
-              <ProfileDropdown />
-            ) : (
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 focus:outline-none"
-              >
-                {isMenuOpen ? (
-                  <X className="h-6 w-6" />
-                ) : (
-                  <Menu className="h-6 w-6" />
-                )}
-              </button>
-            )}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 focus:outline-none"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
           </div>
         </div>
       </div>
 
       <AnimatePresence>
-        {isMenuOpen && !isLoggedIn && (
+        {isMenuOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
@@ -202,8 +146,7 @@ const Navbar = () => {
                 }`}
               >
                 Home
-              </Link
-              >
+              </Link>
               <Link
                 to="/career-assessment"
                 className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
@@ -213,6 +156,14 @@ const Navbar = () => {
                 Career Assessment
               </Link>
               <Link
+                to="/learning-roadmap"
+                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
+                  location.pathname === '/learning-roadmap' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
+                }`}
+              >
+                Roadmap
+              </Link>
+              <Link
                 to="/course-comparison"
                 className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
                   location.pathname === '/course-comparison' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
@@ -220,67 +171,6 @@ const Navbar = () => {
               >
                 Course Comparison
               </Link>
-              <Link
-                to="/profile/resume"
-                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
-                  location.pathname === '/profile/resume' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
-                }`}
-              >
-                Resume Builder
-              </Link>
-              <Link
-                to="/community"
-                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
-                  location.pathname === '/community' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
-                }`}
-              >
-                Community
-              </Link>
-              <Link
-                to="/paths"
-                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
-                  location.pathname === '/paths' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
-                }`}
-              >
-                Project Hub
-              </Link>
-              <Link
-                to="/gamification"
-                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
-                  location.pathname === '/gamification' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
-                }`}
-              >
-                Leaderboard
-              </Link>
-              <Link
-                to="/skill-wallet"
-                className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-grubble-500 dark:hover:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30 ${
-                  location.pathname === '/skill-wallet' ? 'bg-grubble-50 dark:bg-grubble-900/30 text-grubble-500 dark:text-grubble-400' : ''
-                }`}
-              >
-                Skill Wallet
-              </Link>
-              <div className="mt-4 flex flex-col space-y-2 px-3">
-                <Link
-                  to="/login"
-                  className="w-full"
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full border-grubble-500 text-grubble-500 dark:border-grubble-400 dark:text-grubble-400 hover:bg-grubble-50 dark:hover:bg-grubble-900/30"
-                  >
-                    Log in
-                  </Button>
-                </Link>
-                <Link
-                  to="/signup"
-                  className="w-full"
-                >
-                  <Button className="w-full bg-grubble-500 hover:bg-grubble-600 text-white dark:bg-grubble-600 dark:hover:bg-grubble-700">
-                    Sign up
-                  </Button>
-                </Link>
-              </div>
             </div>
           </motion.div>
         )}

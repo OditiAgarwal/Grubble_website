@@ -63,11 +63,11 @@ function App() {
                 <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                 <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
                 <Route path="/profile/resume" element={<ProtectedRoute><Resume /></ProtectedRoute>} />
-                <Route path="/career-assessment" element={<ProtectedRoute><CareerAssessment /></ProtectedRoute>} />
-                <Route path="/course-comparison" element={<ProtectedRoute><CourseComparison /></ProtectedRoute>} />
+                <Route path="/career-assessment" element={<CareerAssessment />} />
+                <Route path="/course-comparison" element={<CourseComparison />} />
                 <Route path="/gamification" element={<ProtectedRoute><Gamification /></ProtectedRoute>} />
                 <Route path="/skill-wallet" element={<ProtectedRoute><SkillWallet /></ProtectedRoute>} />
-                <Route path="/learning-roadmap" element={<ProtectedRoute><LearningRoadmap /></ProtectedRoute>} />
+                <Route path="/learning-roadmap" element={<LearningRoadmap />} />
                 <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
                 
                 {/* 404 Route */}
