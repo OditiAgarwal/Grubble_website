@@ -25,13 +25,8 @@ const SearchBar = () => {
 
   const searchResults: SearchResult[] = [
     { title: 'Career Assessment', description: 'Take our AI-powered career assessment', path: '/career-assessment', category: 'Features' },
-    { title: 'Dashboard', description: 'View your learning progress', path: '/dashboard', category: 'Navigation' },
-    { title: 'Profile', description: 'Manage your profile and settings', path: '/profile', category: 'Account' },
-    { title: 'Skill Wallet', description: 'Track your skills and achievements', path: '/skill-wallet', category: 'Features' },
+    { title: 'Learning Roadmap', description: 'Get personalized learning paths', path: '/learning-roadmap', category: 'Features' },
     { title: 'Course Comparison', description: 'Compare different courses', path: '/course-comparison', category: 'Features' },
-    { title: 'Resume Builder', description: 'Build and optimize your resume', path: '/profile/resume', category: 'Tools' },
-    { title: 'Leaderboard', description: 'See top performers and gamification', path: '/gamification', category: 'Community' },
-    { title: 'Community', description: 'Connect with other learners', path: '/community', category: 'Social' },
   ];
 
   const filteredResults = query.length > 0 

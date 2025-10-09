@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,48 +10,26 @@ import { Input } from '@/components/ui/input';
 import { FilterSection } from '@/components/course-comparison/FilterSection';
 import { ComparisonDialog } from '@/components/course-comparison/ComparisonDialog';
 import CourseDetailDialog from '@/components/course-comparison/CourseDetailDialog';
-import { Star, Clock, DollarSign, Users, BookOpen, GitCompare, Search, Eye } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
+import { Star, Clock, DollarSign, Users, BookOpen, GitCompare, Search, Eye, ExternalLink } from 'lucide-react';
+import { coursesData, CourseData } from '@/data/coursesData';
 
-import { Database } from '@/integrations/supabase/types';
-
-type Course = Database['public']['Tables']['courses']['Row'];
+type Course = CourseData;
 
 const CourseComparison = () => {
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
   const [showComparison, setShowComparison] = useState(false);
   const [showCourseDetail, setShowCourseDetail] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [courses] = useState<Course[]>(coursesData);
+  const [loading] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState({
     platform: 'all',
     level: 'all',
-    duration: [0, 50] as [number, number],
+    duration: [0, 100] as [number, number],
     rating: 'any',
     priceRange: 'all'
   });
-
-  const fetchCourses = async () => {
-    try {
-      const { data, error } = await supabase
-        .from('courses')
-        .select('*')
-        .order('rating', { ascending: false });
-
-      if (error) throw error;
-      setCourses(data || []);
-    } catch (error) {
-      console.error('Error fetching courses:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchCourses();
-  }, []);
 
   const handleViewDetails = (course: Course) => {
     setSelectedCourse(course);
@@ -300,14 +278,25 @@ const CourseComparison = () => {
                             </div>
                           </div>
 
-                          <Button 
-                            size="sm" 
-                            className="w-full bg-grubble-500 hover:bg-grubble-600"
-                            onClick={() => handleViewDetails(course)}
-                          >
-                            <Eye className="h-3 w-3 mr-1" />
-                            View Details
-                          </Button>
+                          <div className="flex gap-2">
+                            <Button 
+                              size="sm" 
+                              className="flex-1 bg-grubble-500 hover:bg-grubble-600"
+                              onClick={() => handleViewDetails(course)}
+                            >
+                              <Eye className="h-3 w-3 mr-1" />
+                              Details
+                            </Button>
+                            <Button 
+                              size="sm" 
+                              variant="outline"
+                              className="flex-1"
+                              onClick={() => window.open(course.url, '_blank')}
+                            >
+                              <ExternalLink className="h-3 w-3 mr-1" />
+                              Visit
+                            </Button>
+                          </div>
                         </CardContent>
                       </Card>
                     </motion.div>

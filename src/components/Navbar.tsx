@@ -49,14 +49,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <h1 className="text-2xl font-bold overflow-hidden leading-none bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+              <h1 className="text-2xl font-bold text-grubble-500 dark:text-grubble-400 overflow-hidden leading-none">
                 <span className="inline-block animate-bounce">G</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.1s' }}>r</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>u</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.3s' }}>b</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>b</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.5s' }}>l</span>
-                <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>e</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.1s' }}>R</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>U</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.3s' }}>B</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>B</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.5s' }}>L</span>
+                <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>E</span>
               </h1>
             </Link>
           </div>
@@ -129,14 +129,14 @@ const Navbar = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <div className="px-3 py-2">
-                <h1 className="text-xl font-bold overflow-hidden leading-none bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
+                <h1 className="text-xl font-bold text-grubble-500 dark:text-grubble-400 overflow-hidden leading-none">
                   <span className="inline-block animate-bounce">G</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.1s' }}>r</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>u</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.3s' }}>b</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>b</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.5s' }}>l</span>
-                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>e</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.1s' }}>R</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>U</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.3s' }}>B</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>B</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.5s' }}>L</span>
+                  <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>E</span>
                 </h1>
               </div>
               <Link

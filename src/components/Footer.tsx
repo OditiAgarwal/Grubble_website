@@ -37,28 +37,18 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Learning Features */}
+          {/* Features */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Learning</h4>
+            <h4 className="text-lg font-semibold text-white">Features</h4>
             <ul className="space-y-2">
-              <li>
-                <Link to="/learning-roadmap" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Personalized Roadmaps
-                </Link>
-              </li>
               <li>
                 <Link to="/career-assessment" className="text-gray-300 hover:text-grubble-400 transition-colors">
                   Career Assessment
                 </Link>
               </li>
               <li>
-                <Link to="/skill-wallet" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Skill Wallet
-                </Link>
-              </li>
-              <li>
-                <Link to="/gamification" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Leaderboard
+                <Link to="/learning-roadmap" className="text-gray-300 hover:text-grubble-400 transition-colors">
+                  Learning Roadmap
                 </Link>
               </li>
               <li>
@@ -66,47 +56,27 @@ const Footer = () => {
                   Course Comparison
                 </Link>
               </li>
-              <li>
-                <Link to="/community" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Community Learning
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Career Tools */}
+          {/* Company */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Career Tools</h4>
+            <h4 className="text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/resume" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Resume Builder
+                <Link to="/about" className="text-gray-300 hover:text-grubble-400 transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Job Board
+                <Link to="/contact" className="text-gray-300 hover:text-grubble-400 transition-colors">
+                  Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/paths" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Career Paths
+                <Link to="/faq" className="text-gray-300 hover:text-grubble-400 transition-colors">
+                  FAQ
                 </Link>
-              </li>
-              <li>
-                <Link to="/profile" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Profile Management
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Interview Prep
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-grubble-400 transition-colors">
-                  Salary Guide
-                </a>
               </li>
             </ul>
           </div>
@@ -128,17 +98,6 @@ const Footer = () => {
                 <span className="text-gray-300">support@grubble.in</span>
               </li>
             </ul>
-            <div className="space-y-2">
-              <Link to="/about" className="block text-gray-300 hover:text-grubble-400 transition-colors">
-                About Us
-              </Link>
-              <Link to="/contact" className="block text-gray-300 hover:text-grubble-400 transition-colors">
-                Contact Us
-              </Link>
-              <Link to="/faq" className="block text-gray-300 hover:text-grubble-400 transition-colors">
-                FAQ
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -148,7 +107,7 @@ const Footer = () => {
               © 2024 Grubble. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 sm:mt-0">
-              <Link to="/privacy-policy" className="text-gray-400 hover:text-grubble-400 text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-grubble-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-gray-400 hover:text-grubble-400 text-sm transition-colors">
