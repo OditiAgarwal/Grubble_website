@@ -73,9 +73,9 @@ export const FeaturesSection = () => {
             <div className="h-12 w-12 bg-grubble-100 rounded-lg flex items-center justify-center mb-6">
               <LineChart className="h-6 w-6 text-grubble-500" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Career Tracking</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Course comparison</h3>
             <p className="text-gray-600">
-              Track your progress, get feedback, and adjust your path as you grow toward your career goals.
+                Discover the right courses for you by comparing curriculum, duration, and cost to accelerate your professional growth.
             </p>
           </motion.div>
         </div>

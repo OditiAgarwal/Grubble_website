@@ -22,28 +22,28 @@ const careerPaths = [
     description: "Master full-stack development, from JavaScript to React, Node.js, and modern frameworks.",
     icon: <Sparkles className="h-10 w-10 text-grubble-500" />,
     color: "bg-grubble-50",
-    link: "/paths/web-development"
+    link: "/learning-roadmap"
   },
   {
     title: "Data Science",
     description: "Learn Python, statistics, machine learning, and data visualization for data-driven decisions.",
     icon: <LineChart className="h-10 w-10 text-teal-600" />,
     color: "bg-teal-50",
-    link: "/paths/data-science"
+    link: "/learning-roadmap"
   },
   {
     title: "Product Management",
     description: "Develop the skills to lead product strategy, roadmaps, and cross-functional teams.",
     icon: <Calendar className="h-10 w-10 text-grubble-500" />,
     color: "bg-grubble-50",
-    link: "/paths/product-management"
+    link: "/learning-roadmap"
   },
   {
     title: "UX/UI Design",
     description: "Create engaging user experiences through research, design thinking, and prototyping.",
     icon: <MessageSquare className="h-10 w-10 text-teal-600" />,
     color: "bg-teal-50",
-    link: "/paths/ux-ui-design"
+    link: "/learning-roadmap"
   }
 ];
 
@@ -100,13 +100,13 @@ export const CareerPathsSection = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <Link to="/community">
+        {/* <div className="mt-12 text-center">
+          <Link to="">
             <Button variant="outline" className="border-grubble-500 text-grubble-500 hover:bg-grubble-50">
               Join Community
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

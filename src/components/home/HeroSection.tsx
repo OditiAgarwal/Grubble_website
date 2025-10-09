@@ -103,7 +103,7 @@ export const HeroSection = () => {
                 size="lg" 
                 variant="outline" 
                 className="border-grubble-500 text-grubble-500 hover:bg-grubble-50"
-                onClick={() => navigate('/paths')}
+                onClick={() => navigate('')}
               >
                 Explore Paths
               </Button>

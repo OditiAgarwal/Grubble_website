@@ -30,31 +30,31 @@ const teamMembers = [
   {
     name: "Latika Mukhi",
     role: "CEO",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    bio: "Visionary leader with 15+ years in EdTech. Passionate about democratizing quality education through AI-powered learning platforms.",
+    image: "./photos/latika.jpg",
+    bio: "Visionary leader. Passionate about democratizing quality education through AI-powered learning platforms.",
     social: {
-      linkedin: "#",
-      twitter: "#"
+        linkedin: "http://linkedin.com/in/latika-mukhi-08b106250/",
+      github: "http://github.com/LatikaMukhi"
     }
   },
   {
     name: "Oditi Agarwal",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    bio: "AI researcher and tech innovator. Specialized in machine learning applications for personalized learning experiences and career development.",
+    role: "Head of Product",
+    image: "./photos/oditi.jpg",
+    bio: "Product strategist. Expert in user experience design and product-market fit for educational platforms.",
     social: {
-      linkedin: "#",
-      github: "#"
+     linkedin: "https://www.linkedin.com/in/oditi-agarwal/",
+      github: "https://github.com/OditiAgarwal"
     }
   },
   {
     name: "Astha Sharma",
-    role: "Head of Product",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    bio: "Product strategist with 10+ years at top tech companies. Expert in user experience design and product-market fit for educational platforms.",
+    role: "CTO",
+    image: "./photos/astha.jpg",
+    bio: "AI researcher and tech innovator. Specialized in machine learning applications for personalized learning experiences and career development.",
     social: {
-      linkedin: "#",
-      twitter: "#"
+     linkedin: "http://www.linkedin.com/in/astha-sharma-105314265",
+      github: "http://github.com/astha-2003"
     }
   }
 ];
@@ -232,11 +232,7 @@ const About = () => {
                         <Linkedin className="h-5 w-5" />
                       </a>
                     )}
-                    {member.social.twitter && (
-                      <a href={member.social.twitter} className="text-gray-400 hover:text-grubble-500 transition-colors">
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                    )}
+                    
                     {member.social.github && (
                       <a href={member.social.github} className="text-gray-400 hover:text-grubble-500 transition-colors">
                         <Github className="h-5 w-5" />

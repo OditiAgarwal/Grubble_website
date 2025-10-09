@@ -30,7 +30,7 @@ export const CTASection = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                onClick={() => navigate('/paths')}
+                onClick={() => navigate('')}
               >
                 Learn More
               </Button>
